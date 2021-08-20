@@ -3,10 +3,10 @@ div(class="section")
   div(class="value get") get
 div(class="section")
   div(class="label") Route
-  div(class="value") http://localhost:3000/golfers
+  div(class="value") http://localhost:3000/golfers/{id}
 div(class="section")
   div(class="label") Description
-  div(class="value") Returns a list of all the golfers
+  div(class="value") Returns the golfer associated with the numeric ID provided in the route.
 div(class="section")
   div(class="label") Response
   div(class="value")
@@ -17,11 +17,4 @@ div(class="section")
       |  events: 20,
       |  wins: 2,
       |  rank: 1
-      |  },
-      |  {
-      |  name: "Jordan Spieth",
-      |  points: 2139,
-      |  events: 22,
-      |  wins: 1,
-      |  rank: 2
-      | }]
+      |  }]

@@ -20,7 +20,7 @@ body {
     justify-content: flex-start;
 
     .side-panel{
-      border: 1px solid red;
+      // border: 1px solid red;
       flex: 1;
       
       .endpoint{
@@ -55,9 +55,29 @@ body {
     }
 
     .doc{
-      border: 1px solid red;
+      // border: 1px solid red;
       flex: 2;
       display: block;
+
+      .section{
+        // background: blue;
+
+        .label{
+          font-size: 22px;
+          font-weight: bold;
+        }
+
+        .value{
+          margin: .75rem;
+          margin-left: 1.5rem;
+        }
+
+        .get, .post, .delete{
+          font-size: 20px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
     }
 
     .doc.hidden{

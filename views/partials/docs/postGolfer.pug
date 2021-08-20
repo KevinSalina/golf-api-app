@@ -1,27 +1,40 @@
 div(class="section")
   div(class="label") Method
-  div(class="value get") get
+  div(class="value post") post
 div(class="section")
   div(class="label") Route
-  div(class="value") http://localhost:3000/golfers
+  div(class="value") http://localhost:3000/golfer
+div(class="section")
+  div(class="label") Headers
+  div(class="value")
+    div(class="header-name") Content-Type
+    div(class="header-value") application/json
+div(class="section")
+  div(class="label") Body
+  div(class="value")
+    pre
+      | {
+      |   "name": "Kevin Salina",
+      |   "points": 2171,  
+      |   "events": 20,
+      |   "wins": 2,
+      |   "rank": 1
+      | }
 div(class="section")
   div(class="label") Description
-  div(class="value") Returns a list of all the golfers
+  div(class="value") Creates a new golfer from the data provided in the body.
 div(class="section")
   div(class="label") Response
   div(class="value")
     pre
-      | [{
-      |  name: "Collin Morikawa",
-      |  points: 2171,
-      |  events: 20,
-      |  wins: 2,
-      |  rank: 1
-      |  },
-      |  {
-      |  name: "Jordan Spieth",
-      |  points: 2139,
-      |  events: 22,
-      |  wins: 1,
-      |  rank: 2
-      | }]
+      | {
+      |   "name": "Kevin Salina",
+      |   "points": 2171,  
+      |   "events": 20,
+      |   "wins": 2,
+      |   "rank": 1,
+      |   "createdAt": "2020-05-06T00:03:48.877Z",
+      |   "updatedAt": "2020-05-06T00:03:48.877Z"
+      | }
+
+
