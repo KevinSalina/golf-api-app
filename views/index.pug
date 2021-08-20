@@ -1,0 +1,36 @@
+html
+  include partials/head.pug
+
+  body
+    h1 Golf App
+
+    div(class='content')
+      h2 Birdie Look Golf App
+      div(class='content-columns')
+        div(class='side-panel')
+          div(class='endpoint' data-endpoint='get-golfer')
+            span(class="get") GET /golfer
+          div(class='endpoint' data-endpoint='get-golfer-id')
+            span(class="get") GET /golfer/{id}
+          div(class='endpoint' data-endpoint='post-golfer')
+            span(class="post") POST /golfer
+          div(class='endpoint' data-endpoint='delete-golfer')
+            span(class="delete") DELETE /golfer
+          div(class='endpoint newroute' data-endpoint='get-tournament')
+            span(class="get") GET /tournament
+          div(class='endpoint' data-endpoint='get-tournament-id')
+            span(class="get") GET /tournament/{id}
+          div(class='endpoint' data-endpoint='post-tournament')
+            span(class="get") POST /tournament
+          div(class='endpoint' data-endpoint='delete-tournament')
+            span(class="get") DELETE /tournament
+          div(class='endpoint newroute' data-endpoint='get-course')
+            span(class="get") GET /course
+          div(class='endpoint' data-endpoint='get-course-id')
+            span(class="get") GET /course/{id}
+          div(class='endpoint' data-endpoint='post-course')
+            span(class="get") POST /course
+          div(class='endpoint' data-endpoint='delete-course')
+            span(class="get") DELETE /course
+          div(class="doc" data-doc="get-golfer")
+            include partials/docs/getGolfers

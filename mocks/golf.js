@@ -32,4 +32,25 @@ const tournaments = [
   }
 ]
 
-module.exports = { players, tournaments }
+const courses = [
+  {
+    name: "Liberty National Golf Course",
+    location: "Jersey City, New Jersey",
+    rating: 69.6,
+    slope: 120,
+    par: 72,
+    tee: "Regular",
+    yards: 5748
+  },
+  {
+    name: "Caves Valley Golf Club",
+    location: "Owings Mills, Maryland",
+    rating: 71.0,
+    slope: 131,
+    par: 71,
+    tee: "White",
+    yards: 6228
+  }
+]
+
+module.exports = { players, tournaments, courses }
