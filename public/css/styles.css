@@ -1,4 +1,81 @@
 body {
-  background: lightblue;
+  min-height: 100vh;
+  margin: 2rem;
+  font-size: 18px;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 30px auto;
+  width: 75%;
+  max-width: 800px;
+}
+
+.content h2 {
+  text-align: center;
+}
+
+.content-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.content-columns .side-panel {
+  border: 1px solid red;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.content-columns .side-panel .endpoint {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.content-columns .side-panel .newroute {
+  margin-top: 2.25rem;
+}
+
+.content-columns .side-panel .selected {
+  background: rgba(102, 102, 102, 0.35);
+  margin-right: 25%;
+  position: relative;
+}
+
+.content-columns .side-panel .selected::after {
+  border: solid transparent;
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: rgba(102, 102, 102, 0.35);
+  border-width: 11px;
+  content: " ";
+  height: 0;
+  left: 100%;
+  margin-top: -11px;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  width: 0;
+}
+
+.content-columns .doc {
+  border: 1px solid red;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: block;
+}
+
+.content-columns .doc.hidden {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -2,35 +2,48 @@ html
   include partials/head.pug
 
   body
-    h1 Golf App
+    h1 Birdie Look Golf 
 
     div(class='content')
-      h2 Birdie Look Golf App
+      h2 Birdie Look API Documentation
       div(class='content-columns')
         div(class='side-panel')
-          div(class='endpoint' data-endpoint='get-golfer')
-            span(class="get") GET /golfer
-          div(class='endpoint' data-endpoint='get-golfer-id')
-            span(class="get") GET /golfer/{id}
-          div(class='endpoint' data-endpoint='post-golfer')
-            span(class="post") POST /golfer
-          div(class='endpoint' data-endpoint='delete-golfer')
-            span(class="delete") DELETE /golfer
-          div(class='endpoint newroute' data-endpoint='get-tournament')
-            span(class="get") GET /tournament
-          div(class='endpoint' data-endpoint='get-tournament-id')
-            span(class="get") GET /tournament/{id}
-          div(class='endpoint' data-endpoint='post-tournament')
-            span(class="get") POST /tournament
-          div(class='endpoint' data-endpoint='delete-tournament')
-            span(class="get") DELETE /tournament
-          div(class='endpoint newroute' data-endpoint='get-course')
-            span(class="get") GET /course
-          div(class='endpoint' data-endpoint='get-course-id')
-            span(class="get") GET /course/{id}
-          div(class='endpoint' data-endpoint='post-course')
-            span(class="get") POST /course
-          div(class='endpoint' data-endpoint='delete-course')
-            span(class="get") DELETE /course
-          div(class="doc" data-doc="get-golfer")
-            include partials/docs/getGolfers
+          div(class='endpoint selected get' data-endpoint='get-golfer') GET /golfer
+          div(class='endpoint get' data-endpoint='get-golfer-id') GET /golfer/{id}
+          div(class='endpoint post' data-endpoint='post-golfer') POST /golfer
+          div(class='endpoint delete' data-endpoint='delete-golfer') DELETE /golfer
+          div(class='endpoint newroute get' data-endpoint='get-tournament') GET /tournament
+          div(class='endpoint get' data-endpoint='get-tournament-id') GET /tournament/{id}
+          div(class='endpoint post' data-endpoint='post-tournament') POST /tournament
+          div(class='endpoint delete' data-endpoint='delete-tournament') DELETE /tournament
+          div(class='endpoint newroute get' data-endpoint='get-course') GET /course
+          div(class='endpoint get' data-endpoint='get-course-id') GET /course/{id}
+          div(class='endpoint post' data-endpoint='post-course') POST /course
+          div(class='endpoint delete' data-endpoint='delete-course') DELETE /course
+        div(class="doc" data-doc="get-golfer")
+          include partials/docs/getGolfers
+        div(class="doc hidden" data-doc="get-golfer-id")
+          include partials/docs/getGolferId
+        div(class="doc hidden" data-doc="post-golfer")
+          include partials/docs/postGolfer
+        div(class="doc hidden" data-doc="delete-golfer")
+          include partials/docs/deleteGolfer
+        div(class="doc hidden" data-doc="get-tournament")
+          include partials/docs/getTournaments
+        div(class="doc hidden" data-doc="get-tournament-id")
+          include partials/docs/getTournamentId
+        div(class="doc hidden" data-doc="post-tournament")
+          include partials/docs/postTournament
+        div(class="doc hidden" data-doc="delete-tournament")
+          include partials/docs/deleteTournament
+        div(class="doc hidden" data-doc="get-course")
+          include partials/docs/getCourses
+        div(class="doc hidden" data-doc="get-course-id")
+          include partials/docs/getCourseId
+        div(class="doc hidden" data-doc="post-course")
+          include partials/docs/postCourse
+        div(class="doc hidden" data-doc="delete-course")
+          include partials/docs/deleteCourse
+
+
+    script(src="./javascript/main.js")

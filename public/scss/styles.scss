@@ -1,3 +1,67 @@
 body {
-  background: lightblue;
+  min-height: 100vh;
+  margin: 2rem;
+  font-size: 18px;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  width: 75%;
+  max-width: 800px;
+
+  h2{
+    text-align: center;
+  }
+
+  &-columns{
+    display: flex;
+    justify-content: flex-start;
+
+    .side-panel{
+      border: 1px solid red;
+      flex: 1;
+      
+      .endpoint{
+        margin-bottom: 1rem;
+        cursor: pointer;
+      }
+
+      .newroute{
+        margin-top: 2.25rem;
+      }
+
+      .selected{
+        background: rgba(102, 102, 102, .35);
+        margin-right: 25%;
+        position: relative;
+
+        &::after{
+          border: solid transparent;
+          border-color: rgba(136, 183, 213, 0);
+          border-left-color: rgba(102, 102, 102, .35);
+          border-width: 11px;
+          content: " ";
+          height: 0;
+          left: 100%;
+          margin-top: -11px;
+          pointer-events: none;
+          position: absolute;
+          top: 50%;
+          width: 0; 
+        }
+      }
+    }
+
+    .doc{
+      border: 1px solid red;
+      flex: 2;
+      display: block;
+    }
+
+    .doc.hidden{
+      display: none;
+    }
+  }
 }
