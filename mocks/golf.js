@@ -1,5 +1,6 @@
 const players = [
   {
+    id: 1,
     name: "Collin Morikawa",
     points: 2171,
     events: 20,
@@ -7,6 +8,7 @@ const players = [
     rank: 1
   },
   {
+    id: 2,
     name: "Jordan Spieth",
     points: 2139,
     events: 22,

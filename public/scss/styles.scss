@@ -1,67 +1,86 @@
+$black: #2d2d2a;
+$slateGreen: #3f5e5a;
+$slateGreenAccent: #96B1AD;
+$springGreen: #20FC8F;
+$blackOlive: #353831;
+$kombuGreen: #38423B; 
+
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   min-height: 100vh;
-  margin: 2rem;
+  margin: 0;
   font-size: 18px;
 }
 
-.content{
+h1{
+  padding: 2rem;
+  width: 100%;
+  margin-bottom: 0;
+  background: $slateGreen;
+  color: $slateGreenAccent;
+  text-shadow: 2px 2px 0px $black;
+  font-size: 3.25rem
+}
+
+.content-columns{
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  margin: 30px auto;
-  width: 75%;
-  max-width: 800px;
+  justify-content: flex-start;
 
-  h2{
-    text-align: center;
-  }
-
-  &-columns{
-    display: flex;
-    justify-content: flex-start;
-
-    .side-panel{
-      // border: 1px solid red;
-      flex: 1;
-      
-      .endpoint{
-        margin-bottom: 1rem;
-        cursor: pointer;
-      }
-
-      .newroute{
-        margin-top: 2.25rem;
-      }
-
-      .selected{
-        background: rgba(102, 102, 102, .35);
-        margin-right: 25%;
-        position: relative;
-
-        &::after{
-          border: solid transparent;
-          border-color: rgba(136, 183, 213, 0);
-          border-left-color: rgba(102, 102, 102, .35);
-          border-width: 11px;
-          content: " ";
-          height: 0;
-          left: 100%;
-          margin-top: -11px;
-          pointer-events: none;
-          position: absolute;
-          top: 50%;
-          width: 0; 
-        }
-      }
+  .side-panel{
+    background: $slateGreenAccent;
+    flex: 1;
+    max-width: 300px;
+    padding: 1rem;
+    color: white;
+    overflow-y: scroll;
+    
+    .endpoint{
+      margin-bottom: 1rem;
+      cursor: pointer;
     }
 
+    .newroute{
+      margin-top: 2.25rem;
+    }
+
+    .selected{
+      background: rgba(63, 94, 90, .35);
+      margin-right: 25%;
+      position: relative;
+
+      &::after{
+        border: solid transparent;
+        border-color: rgba(136, 183, 213, 0);
+        border-left-color: rgba(63, 94, 90, .35);
+        border-width: 11px;
+        content: " ";
+        height: 0;
+        left: 100%;
+        margin-top: -11px;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        width: 0; 
+      }
+    }
+  }
+
+  .doc-panel{
+    flex: 2;
+    padding: 2rem;
+     overflow-y: scroll;
+
     .doc{
-      // border: 1px solid red;
-      flex: 2;
       display: block;
+     
 
       .section{
-        // background: blue;
-
+     
         .label{
           font-size: 22px;
           font-weight: bold;
@@ -84,4 +103,6 @@ body {
       display: none;
     }
   }
+
+
 }

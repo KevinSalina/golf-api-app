@@ -1,27 +1,26 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   min-height: 100vh;
-  margin: 2rem;
+  margin: 0;
   font-size: 18px;
 }
 
-.content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 30px auto;
-  width: 75%;
-  max-width: 800px;
-}
-
-.content h2 {
-  text-align: center;
+h1 {
+  padding: 2rem;
+  width: 100%;
+  margin-bottom: 0;
+  background: #3f5e5a;
+  color: #96B1AD;
+  text-shadow: 2px 2px 0px #2d2d2a;
+  font-size: 3.25rem;
 }
 
 .content-columns {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,9 +30,14 @@ body {
 }
 
 .content-columns .side-panel {
+  background: #96B1AD;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  max-width: 300px;
+  padding: 1rem;
+  color: white;
+  overflow-y: scroll;
 }
 
 .content-columns .side-panel .endpoint {
@@ -46,7 +50,7 @@ body {
 }
 
 .content-columns .side-panel .selected {
-  background: rgba(102, 102, 102, 0.35);
+  background: rgba(63, 94, 90, 0.35);
   margin-right: 25%;
   position: relative;
 }
@@ -54,7 +58,7 @@ body {
 .content-columns .side-panel .selected::after {
   border: solid transparent;
   border-color: rgba(136, 183, 213, 0);
-  border-left-color: rgba(102, 102, 102, 0.35);
+  border-left-color: rgba(63, 94, 90, 0.35);
   border-width: 11px;
   content: " ";
   height: 0;
@@ -66,30 +70,35 @@ body {
   width: 0;
 }
 
-.content-columns .doc {
+.content-columns .doc-panel {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
+  padding: 2rem;
+  overflow-y: scroll;
+}
+
+.content-columns .doc-panel .doc {
   display: block;
 }
 
-.content-columns .doc .section .label {
+.content-columns .doc-panel .doc .section .label {
   font-size: 22px;
   font-weight: bold;
 }
 
-.content-columns .doc .section .value {
+.content-columns .doc-panel .doc .section .value {
   margin: .75rem;
   margin-left: 1.5rem;
 }
 
-.content-columns .doc .section .get, .content-columns .doc .section .post, .content-columns .doc .section .delete {
+.content-columns .doc-panel .doc .section .get, .content-columns .doc-panel .doc .section .post, .content-columns .doc-panel .doc .section .delete {
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.content-columns .doc.hidden {
+.content-columns .doc-panel .doc.hidden {
   display: none;
 }
 /*# sourceMappingURL=styles.css.map */
