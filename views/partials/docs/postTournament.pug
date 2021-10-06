@@ -13,27 +13,28 @@ div(class="section")
   div(class="label") Body
   div(class="value")
     pre
-      | {
-      |   "name": "The Masters Tournament",
-      |   "purse": 11500000,
-      |   "location": "Augusta, Georgia",
-      |   course: "Augusta National Golf Club",
-      |   date: "Apr 4 - Apr 10, 2021"
-      | }
+      | [{
+      |    "name": "World Golf Championships-Workday Championship at The Concession",
+      |    "course": 3,
+      |    "winner": 3,
+      |    "purse": 10500000,
+      |    "date": "2/28/2021"
+      |  }]
+
 div(class="section")
   div(class="label") Description
-  div(class="value") Creates a new tournament from the data provided in the body.
+  div(class="value") Creates a new tournament from the data provided in the body. Course and Winning golfer ID required.
 div(class="section")
   div(class="label") Response
   div(class="value")
     pre
-      | {
-      |   "id": 3,
-      |   "name": "The Masters Tournament",
-      |   "purse": 11500000,
-      |   "location": "Augusta, Georgia",
-      |   course: "Augusta National Golf Club",
-      |   date: "Apr 4 - Apr 10, 2021"
+      | [{
+      |   "id": 3 
+      |   "name": "World Golf Championships-Workday Championship at The Concession",
+      |   "course": 3,
+      |   "winner": 3,
+      |   "purse": 10500000,
+      |   "date": "2/28/2021"
       |   "createdAt": "2020-05-06T00:03:48.877Z",
       |   "updatedAt": "2020-05-06T00:03:48.877Z"
-      | }
+      | }]
