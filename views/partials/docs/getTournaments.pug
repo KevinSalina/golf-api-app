@@ -11,19 +11,29 @@ div(class="section")
   div(class="label") Response
   div(class="value")
     pre
-      |[{
-      |   id: 1,
-      |   name: "The Northen Trust",
-      |   purse: 9500000,
-      |   location: "Jersey City, New Jersey",
-      |   course: "Liberty National Golf Course",
-      |   date: "Aug 19 - Aug 22, 2021"
-      | },
-      | {
-      |   id: 2,
-      |   name: "BMW Championship",
-      |   purse: 9500000,
-      |   location: "Owings Mills, Maryland",
-      |   course: "Caves Valley Golf Club",
-      |   date: "Aug 26 - Aug 29, 2021"
+      | [{
+      |    "name": "BMW Championship",
+      |    "course": 1,
+      |    "winner": 4,
+      |    "purse": 9500000,
+      |    "date": "8/29/2021"
+      |    "winner": {
+      |     "name": "Patrick Cantlay"  
+      |     }
+      |    "course":{
+      |      "name": "Caves Valley golf Club"
+      |     }
+      |  },
+      |  {
+      |    "name": "The Open Championship",
+      |    "course": 2,
+      |    "winner": 3,
+      |    "purse": 11500000,
+      |    "date": "7/18/2021"
+      |    "winner": {
+      |     "name": "Colin Morikawa"  
+      |     }
+      |    "course":{
+      |      "name": "Royal St. George's GC"
+      |     }
       | }]
